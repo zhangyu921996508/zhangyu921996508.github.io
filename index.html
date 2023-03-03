@@ -165,14 +165,35 @@
 
         
         <a href="/2023/03/02/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2023-03-02T03:25:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-02</time>
+  	<time datetime="2023-03-02T03:25:34.639Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <pre><code> dexo 安装 操作
+ 查看版本：cnpm -v
+ 验证：hexo -v
+ 初始化hexo：hexo init
+ 新建文章：hexo n &quot;my first blog&quot;
+ 启动博客（或是在之后预览）:hexo s
+ 然后清理缓存：hexo clean
+ 生成：hexo g
+ 启动：hexo s
+
+
+ cnpm install --save hexo-deployer-git
+
+ //注意空格
+deploy:
+type: git
+repo: https://github.com/Zhang-Xiaohei/Zhang-Xiaohei.github.io.git
+branch: master
+
+样板放在  themes 文件下 如   themes/yilia
+</code></pre>
+
       
 
       
@@ -180,6 +201,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -380,6 +412,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
