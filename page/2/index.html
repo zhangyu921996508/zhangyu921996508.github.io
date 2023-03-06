@@ -60,7 +60,7 @@
 			</ul>
 		</nav>
 		<nav>
-			<a>总文章数14</a>
+			<a>总文章数15</a>
 		
 		</nav>
 		
@@ -161,6 +161,80 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-存图片" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+   
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/03/03/%E5%AD%98%E5%9B%BE%E7%89%87/">存入图片</a>
+    </h1>
+  
+
+        
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="通常对用户上传的图片需要保存到数据库中。解决方法一般有两种：一种是将图片保存的路径存储到数据库；另一种是将图片以二进制数据流的形式直接-写入数据库字段中。以下为具体方法："><a href="#通常对用户上传的图片需要保存到数据库中。解决方法一般有两种：一种是将图片保存的路径存储到数据库；另一种是将图片以二进制数据流的形式直接-写入数据库字段中。以下为具体方法：" class="headerlink" title="通常对用户上传的图片需要保存到数据库中。解决方法一般有两种：一种是将图片保存的路径存储到数据库；另一种是将图片以二进制数据流的形式直接 写入数据库字段中。以下为具体方法："></a>通常对用户上传的图片需要保存到数据库中。解决方法一般有两种：一种是将图片保存的路径存储到数据库；另一种是将图片以二进制数据流的形式直接 写入数据库字段中。以下为具体方法：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">###　一、保存图片的上传路径到数据库：</span></span><br><span class="line">　　string uppath=<span class="string">&quot;&quot;</span>;//用于保存图片上传路径</span><br><span class="line">　　//获取上传图片的文件名</span><br><span class="line">　　string fileFullname = this.FileUpload1.FileName;</span><br><span class="line">　　//获取图片上传的时间，以时间作为图片的名字可以防止图片重名</span><br><span class="line">　　string dataName = DateTime.Now.ToString(<span class="string">&quot;yyyyMMddhhmmss&quot;</span>);</span><br><span class="line">　　//获取图片的文件名（不含扩展名）</span><br><span class="line">　　string fileName = fileFullname.Substring(fileFullname.LastIndexOf(<span class="string">&quot;\\&quot;</span>) + 1);</span><br><span class="line">　　//获取图片扩展名</span><br><span class="line">　　string <span class="built_in">type</span> = fileFullname.Substring(fileFullname.LastIndexOf(<span class="string">&quot;.&quot;</span>) + 1);</span><br><span class="line">　　//判断是否为要求的格式</span><br><span class="line">　　<span class="keyword">if</span> (<span class="built_in">type</span> == <span class="string">&quot;bmp&quot;</span> || <span class="built_in">type</span> == <span class="string">&quot;jpg&quot;</span> || <span class="built_in">type</span> == <span class="string">&quot;jpeg&quot;</span> || <span class="built_in">type</span> == <span class="string">&quot;gif&quot;</span> || <span class="built_in">type</span> == <span class="string">&quot;JPG&quot;</span> || <span class="built_in">type</span> == <span class="string">&quot;JPEG&quot;</span> || <span class="built_in">type</span> == <span class="string">&quot;BMP&quot;</span> || <span class="built_in">type</span> == <span class="string">&quot;GIF&quot;</span>)</span><br><span class="line">　　&#123;</span><br><span class="line">　　//将图片上传到指定路径的文件夹</span><br><span class="line">　　this.FileUpload1.SaveAs(Server.MapPath(<span class="string">&quot;~/upload&quot;</span>) + <span class="string">&quot;\\&quot;</span> + dataName + <span class="string">&quot;.&quot;</span> + <span class="built_in">type</span>);</span><br><span class="line">　　//将路径保存到变量，将该变量的值保存到数据库相应字段即可</span><br><span class="line">　　uppath = <span class="string">&quot;~/upload/&quot;</span> + dataName + <span class="string">&quot;.&quot;</span> + <span class="built_in">type</span>;</span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### 二、将图片以二进制数据流直接保存到数据库：</span></span><br><span class="line">　　引用如下命名空间：</span><br><span class="line">　　using System.Drawing;</span><br><span class="line">　　using System.IO;</span><br><span class="line">　　using System.Data.SqlClient;</span><br><span class="line">　　设计数据库时，表中相应的字段类型为iamge</span><br><span class="line">　　保存：</span><br><span class="line">　　//图片路径</span><br><span class="line">　　string strPath = this.FileUpload1.PostedFile.FileName.ToString ();</span><br><span class="line">　　//读取图片</span><br><span class="line">　　FileStream fs = new System.IO.FileStream(strPath, FileMode.Open, FileAccess.Read);</span><br><span class="line">　　BinaryReader br = new BinaryReader(fs);</span><br><span class="line">　　byte[] photo = br.ReadBytes((int)fs.Length);</span><br><span class="line">　　br.Close();</span><br><span class="line">　　fs.Close();</span><br><span class="line">　　//存入</span><br><span class="line">　　SqlConnection myConn = new SqlConnection(&quot;Data Source=.;Initial Catalog=stumanage;User ID=sa;Password=<span class="number">123</span>&quot;);</span><br><span class="line">　　string strComm = &quot; INSERT INTO stuInfo(stuid,stuimage) VALUES(<span class="number">107</span>,@photoBinary )&quot;;//操作数据库语句根据需要修改</span><br><span class="line">　　SqlCommand myComm = new SqlCommand(strComm, myConn);</span><br><span class="line">　　myComm.Parameters.Add(&quot;@photoBinary&quot;, SqlDbType.Binary, photo.Length);</span><br><span class="line">　　myComm.Parameters[&quot;@photoBinary&quot;].Value = photo;</span><br><span class="line">　　myConn.Open();</span><br><span class="line">　　if (myComm.ExecuteNonQuery() &gt; <span class="number">0</span>)</span><br><span class="line">　　&#123;</span><br><span class="line">　　this.Label1.Text = &quot;ok&quot;;</span><br><span class="line">　　&#125;</span><br><span class="line">　　myConn.Close();</span><br><span class="line">　　读取：</span><br><span class="line">　　...连接数据库字符串省略</span><br><span class="line">　　mycon.Open();</span><br><span class="line">　　SqlCommand command = new</span><br><span class="line">　　SqlCommand(&quot;select stuimage from stuInfo where stuid=<span class="number">107</span>&quot;, mycon);//查询语句根据需要修改</span><br><span class="line">　　byte[] image = (byte[])command.ExecuteScalar ();</span><br><span class="line">　　//指定从数据库读取出来的图片的保存路径及名字</span><br><span class="line">　　string strPath = &quot;~/Upload/zhangsan.JPG&quot;;</span><br><span class="line">　　string strPhotoPath = Server.MapPath(strPath);</span><br><span class="line">　　//按上面的路径与名字保存图片文件</span><br><span class="line">　　BinaryWriter bw = new BinaryWriter(File.Open(strPhotoPath,FileMode.OpenOrCreate));</span><br><span class="line">　　bw.Write(image);</span><br><span class="line">　　bw.Close();</span><br><span class="line">　　//显示图片</span><br><span class="line">　　this.Image1.ImageUrl = strPath;</span><br><span class="line">　　采用俩种方式可以根据实际需求灵活选择。</span><br></pre></td></tr></table></figure>
+      
+       
+      
+      
+      <div hidden="hidden"></div>
+    
+
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/03/03/%E5%AD%98%E5%9B%BE%E7%89%87/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-Java链表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -595,6 +669,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Java,JVM</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
