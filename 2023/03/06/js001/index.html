@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://zhangyu921996508.github.io">
-  <title>MR.Zhang 博客</title>
+  <title>js使用技巧 | MR.Zhang 博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="MR.Zhang 博客">
-<meta property="og:url" content="https://zhangyu921996508.github.io/page/2/index.html">
+  <meta name="description" content="1. 禁止右键点击12345$(document).ready(function()&amp;#123;    $(document).bind(&quot;contextmenu&quot;,function(e)&amp;#123;        return false;    &amp;#125;);&amp;#125;); 2. 隐藏搜索文本框文字12345678910111213141516Hide when cli">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js使用技巧">
+<meta property="og:url" content="https://zhangyu921996508.github.io/2023/03/06/js001/index.html">
 <meta property="og:site_name" content="MR.Zhang 博客">
+<meta property="og:description" content="1. 禁止右键点击12345$(document).ready(function()&amp;#123;    $(document).bind(&quot;contextmenu&quot;,function(e)&amp;#123;        return false;    &amp;#125;);&amp;#125;); 2. 隐藏搜索文本框文字12345678910111213141516Hide when cli">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-03-06T02:28:18.429Z">
+<meta property="article:modified_time" content="2023-03-06T02:40:14.982Z">
 <meta property="article:author" content="MR.Zhang 博客">
+<meta property="article:tag" content="js,jq,java">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="MR.Zhang 博客" type="application/atom+xml">
@@ -160,36 +165,123 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
+            <article id="post-js001" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+   
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      js使用技巧
+    </h1>
+  
+
+        
+        
+        <a href="/2023/03/06/js001/" class="archive-article-date">
+  	<time datetime="2023-03-06T02:28:18.429Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-禁止右键点击"><a href="#1-禁止右键点击" class="headerlink" title="1. 禁止右键点击"></a>1. 禁止右键点击</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    $(document).<span class="built_in">bind</span>(<span class="string">&quot;contextmenu&quot;</span>,<span class="keyword">function</span>(e)&#123;</span><br><span class="line">        <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="2-隐藏搜索文本框文字"><a href="#2-隐藏搜索文本框文字" class="headerlink" title="2. 隐藏搜索文本框文字"></a>2. 隐藏搜索文本框文字</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Hide when clicked <span class="keyword">in</span> the search field, the value.(example can be found below <span class="keyword">in</span> the comment fields)</span><br><span class="line"></span><br><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">$(<span class="string">&quot;input.text1&quot;</span>).val(<span class="string">&quot;Enter your search text here&quot;</span>);</span><br><span class="line">   textFill($(<span class="string">&#x27;input.text1&#x27;</span>));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> textFill(input)&#123; //input focus text <span class="keyword">function</span></span><br><span class="line">     var originalvalue = input.val();</span><br><span class="line">     input.focus( <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">          <span class="keyword">if</span>( $.trim(input.val()) == originalvalue )&#123; input.val(<span class="string">&#x27;&#x27;</span>); &#125;</span><br><span class="line">     &#125;);</span><br><span class="line">     input.blur( <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">          <span class="keyword">if</span>( $.trim(input.val()) == <span class="string">&#x27;&#x27;</span> )&#123; input.val(originalvalue); &#125;</span><br><span class="line">     &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-在新窗口中打开链接"><a href="#3-在新窗口中打开链接" class="headerlink" title="3. 在新窗口中打开链接"></a>3. 在新窗口中打开链接</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">XHTML 1.0 Strict doesn’t allow this attribute <span class="keyword">in</span> the code, so use this to keep the code valid.</span><br><span class="line"></span><br><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">   //Example 1: Every <span class="built_in">link</span> will open <span class="keyword">in</span> a new window</span><br><span class="line">   $(<span class="string">&#x27;a[href^=&quot;http://&quot;]&#x27;</span>).attr(<span class="string">&quot;target&quot;</span>, <span class="string">&quot;_blank&quot;</span>);</span><br><span class="line"></span><br><span class="line">   //Example 2: Links with the rel=<span class="string">&quot;external&quot;</span> attribute will only open <span class="keyword">in</span> a new window</span><br><span class="line">   $(<span class="string">&#x27;a[@rel$=&#x27;</span>external<span class="string">&#x27;]&#x27;</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">      this.target = <span class="string">&quot;_blank&quot;</span>;</span><br><span class="line">   &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">// how to use</span><br><span class="line">&lt;a href=<span class="string">&quot;http://www.opensourcehunter.com&quot;</span> rel=external&gt;open <span class="built_in">link</span>&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="4-检测浏览器"><a href="#4-检测浏览器" class="headerlink" title="4. 检测浏览器"></a>4. 检测浏览器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">注: 在版本jQuery 1.4中，$.support 替换掉了$.browser 变量</span><br><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">// Target Firefox 2 and above</span><br><span class="line"><span class="keyword">if</span> ($.browser.mozilla &amp;&amp; $.browser.version &gt;= <span class="string">&quot;1.8&quot;</span> )&#123;</span><br><span class="line">    // <span class="keyword">do</span> something</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// Target Safari</span><br><span class="line"><span class="keyword">if</span>( $.browser.safari )&#123;</span><br><span class="line">    // <span class="keyword">do</span> something</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// Target Chrome</span><br><span class="line"><span class="keyword">if</span>( $.browser.chrome)&#123;</span><br><span class="line">    // <span class="keyword">do</span> something</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// Target Camino</span><br><span class="line"><span class="keyword">if</span>( $.browser.camino)&#123;</span><br><span class="line">    // <span class="keyword">do</span> something</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// Target Opera</span><br><span class="line"><span class="keyword">if</span>( $.browser.opera)&#123;</span><br><span class="line">    // <span class="keyword">do</span> something</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// Target IE6 and below</span><br><span class="line"><span class="keyword">if</span> ($.browser.msie &amp;&amp; $.browser.version &lt;= 6 )&#123;</span><br><span class="line">    // <span class="keyword">do</span> something</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// Target anything above IE6</span><br><span class="line"><span class="keyword">if</span> ($.browser.msie &amp;&amp; $.browser.version &gt; 6)&#123;</span><br><span class="line">    // <span class="keyword">do</span> something</span><br><span class="line">&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="5-预加载图片"><a href="#5-预加载图片" class="headerlink" title="5. 预加载图片"></a>5. 预加载图片</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">This piece of code will prevent the loading of all images, <span class="built_in">which</span> can be useful <span class="keyword">if</span> you have a site with lots of images.</span><br><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">jQuery.preloadImages = <span class="function"><span class="title">function</span></span>()</span><br><span class="line">&#123;</span><br><span class="line">  <span class="keyword">for</span>(var i = 0; i&lt;ARGUMENTS.LENGTH; jQuery(?&lt;img &#123; i++)&gt;<span class="string">&quot;).attr(&quot;</span>src<span class="string">&quot;, arguments[i]);</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">// how to use</span></span><br><span class="line"><span class="string">$.preloadImages(&quot;</span>image1.jpg<span class="string">&quot;);</span></span><br><span class="line"><span class="string">&#125;);</span></span><br></pre></td></tr></table></figure>
+<h2 id="6-页面样式切换"><a href="#6-页面样式切换" class="headerlink" title="6. 页面样式切换"></a>6. 页面样式切换</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">    $(<span class="string">&quot;a.Styleswitcher&quot;</span>).click(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">        //swicth the LINK REL attribute with the value <span class="keyword">in</span> A REL attribute</span><br><span class="line">        $(<span class="string">&#x27;link[rel=stylesheet]&#x27;</span>).attr(<span class="string">&#x27;href&#x27;</span> , $(this).attr(<span class="string">&#x27;rel&#x27;</span>));</span><br><span class="line">    &#125;);</span><br><span class="line">// how to use</span><br><span class="line">// place this <span class="keyword">in</span> your header</span><br><span class="line">&lt;LINK rel=stylesheet <span class="built_in">type</span>=text/css href=<span class="string">&quot;default.css&quot;</span>&gt;</span><br><span class="line">// the links</span><br><span class="line">&lt;A href=<span class="string">&quot;#&quot;</span> rel=default.css&gt;Default Theme&lt;/A&gt;</span><br><span class="line">&lt;A href=<span class="string">&quot;#&quot;</span> rel=red.css&gt;Red Theme&lt;/A&gt;</span><br><span class="line">&lt;A href=<span class="string">&quot;#&quot;</span> rel=blue.css&gt;Blue Theme&lt;/A&gt;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="7-列高度相同"><a href="#7-列高度相同" class="headerlink" title="7. 列高度相同"></a>7. 列高度相同</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">如果使用了两个CSS列，使用此种方式可以是两列的高度相同。</span><br><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line"><span class="keyword">function</span> equalHeight(group) &#123;</span><br><span class="line">    tallest = 0;</span><br><span class="line">    group.each(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">        thisHeight = $(this).height();</span><br><span class="line">        <span class="keyword">if</span>(thisHeight &gt; tallest) &#123;</span><br><span class="line">            tallest = thisHeight;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    group.height(tallest);</span><br><span class="line">&#125;</span><br><span class="line">// how to use</span><br><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">    equalHeight($(<span class="string">&quot;.left&quot;</span>));</span><br><span class="line">    equalHeight($(<span class="string">&quot;.right&quot;</span>));</span><br><span class="line">&#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="8-动态控制页面字体大小"><a href="#8-动态控制页面字体大小" class="headerlink" title="8. 动态控制页面字体大小"></a>8. 动态控制页面字体大小</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">用户可以改变页面字体大小</span><br><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">  // Reset the font size(back to default)</span><br><span class="line">  var originalFontSize = $(<span class="string">&#x27;html&#x27;</span>).css(<span class="string">&#x27;font-size&#x27;</span>);</span><br><span class="line">    $(<span class="string">&quot;.resetFont&quot;</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    $(<span class="string">&#x27;html&#x27;</span>).css(<span class="string">&#x27;font-size&#x27;</span>, originalFontSize);</span><br><span class="line">  &#125;);</span><br><span class="line">  // Increase the font size(bigger font0</span><br><span class="line">  $(<span class="string">&quot;.increaseFont&quot;</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    var currentFontSize = $(<span class="string">&#x27;html&#x27;</span>).css(<span class="string">&#x27;font-size&#x27;</span>);</span><br><span class="line">    var currentFontSizeNum = parseFloat(currentFontSize, 10);</span><br><span class="line">    var newFontSize = currentFontSizeNum*1.2;</span><br><span class="line">    $(<span class="string">&#x27;html&#x27;</span>).css(<span class="string">&#x27;font-size&#x27;</span>, newFontSize);</span><br><span class="line">    <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;);</span><br><span class="line">  // Decrease the font size(smaller font)</span><br><span class="line">  $(<span class="string">&quot;.decreaseFont&quot;</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    var currentFontSize = $(<span class="string">&#x27;html&#x27;</span>).css(<span class="string">&#x27;font-size&#x27;</span>);</span><br><span class="line">    var currentFontSizeNum = parseFloat(currentFontSize, 10);</span><br><span class="line">    var newFontSize = currentFontSizeNum*0.8;</span><br><span class="line">    $(<span class="string">&#x27;html&#x27;</span>).css(<span class="string">&#x27;font-size&#x27;</span>, newFontSize);</span><br><span class="line">    <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="9-返回页面顶部功能"><a href="#9-返回页面顶部功能" class="headerlink" title="9. 返回页面顶部功能"></a>9. 返回页面顶部功能</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">For a smooth(animated) ride back to the top(or any location).</span><br><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">$(<span class="string">&#x27;a[href*=#]&#x27;</span>).click(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line"> <span class="keyword">if</span> (location.pathname.replace(/^\//,<span class="string">&#x27;&#x27;</span>) == this.pathname.replace(/^\//,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"> &amp;&amp; location.hostname == this.hostname) &#123;</span><br><span class="line">   var <span class="variable">$target</span> = $(this.hash);</span><br><span class="line">   <span class="variable">$target</span> = <span class="variable">$target</span>.length &amp;&amp; <span class="variable">$target</span></span><br><span class="line">   || $(<span class="string">&#x27;[name=&#x27;</span> + this.hash.slice(1) +<span class="string">&#x27;]&#x27;</span>);</span><br><span class="line">   <span class="keyword">if</span> (<span class="variable">$target</span>.length) &#123;</span><br><span class="line">  var targetOffset = <span class="variable">$target</span>.offset().top;</span><br><span class="line">  $(<span class="string">&#x27;html,body&#x27;</span>)</span><br><span class="line">  .animate(&#123;scrollTop: targetOffset&#125;, 900);</span><br><span class="line">    <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">// how to use</span><br><span class="line">// place this <span class="built_in">where</span> you want to scroll to</span><br><span class="line">&lt;A name=top&gt;&lt;/A&gt;</span><br><span class="line">// the <span class="built_in">link</span></span><br><span class="line">&lt;A href=<span class="string">&quot;#top&quot;</span>&gt;go to top&lt;/A&gt;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="10-获得鼠标指针XY值"><a href="#10-获得鼠标指针XY值" class="headerlink" title="10. 获得鼠标指针XY值"></a>10. 获得鼠标指针XY值</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Want to know <span class="built_in">where</span> your mouse cursor is?</span><br><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">   $().mousemove(<span class="keyword">function</span>(e)&#123;</span><br><span class="line">     //display the x and y axis values inside the div with the <span class="built_in">id</span> XY</span><br><span class="line">    $(<span class="string">&#x27;#XY&#x27;</span>).html(<span class="string">&quot;X Axis : &quot;</span> + e.pageX + <span class="string">&quot; | Y Axis &quot;</span> + e.pageY);</span><br><span class="line">  &#125;);</span><br><span class="line">// how to use</span><br><span class="line">&lt;DIV <span class="built_in">id</span>=XY&gt;&lt;/DIV&gt;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="11-返回顶部按钮"><a href="#11-返回顶部按钮" class="headerlink" title="11.返回顶部按钮"></a>11.返回顶部按钮</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">你可以利用 animate 和 scrollTop 来实现返回顶部的动画，而不需要使用其他插件。</span><br><span class="line">// Back to top</span><br><span class="line">$(<span class="string">&#x27;a.top&#x27;</span>).click(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">  $(document.body).animate(&#123;scrollTop: 0&#125;, 800);</span><br><span class="line">  <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;);</span><br><span class="line">&lt;!-- Create an anchor tag --&gt;</span><br><span class="line">&lt;a href=<span class="string">&quot;#&quot;</span>&gt;Back to top&lt;/a&gt;</span><br><span class="line">改变 scrollTop 的值可以调整返回距离顶部的距离，而 animate 的第二个参数是执行返回动作需要的时间(单位：毫秒)。</span><br></pre></td></tr></table></figure>
+<h2 id="12-预加载图片"><a href="#12-预加载图片" class="headerlink" title="12.预加载图片"></a>12.预加载图片</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">如果你的页面中使用了很多不可见的图片（如：hover 显示），你可能需要预加载它们：</span><br><span class="line">$.preloadImages = <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">  <span class="keyword">for</span> (var i = 0; i &lt; arguments.length; i++) &#123;</span><br><span class="line">    $(<span class="string">&#x27;&lt;img&gt;&#x27;</span>).attr(<span class="string">&#x27;src&#x27;</span>, arguments[i]);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">$.preloadImages(<span class="string">&#x27;img/hover1.png&#x27;</span>, <span class="string">&#x27;img/hover2.png&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="13-检查图片是否加载完成"><a href="#13-检查图片是否加载完成" class="headerlink" title="13.检查图片是否加载完成"></a>13.检查图片是否加载完成</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">有时候你需要确保图片完成加载完成以便执行后面的操作：</span><br><span class="line">$(<span class="string">&#x27;img&#x27;</span>).load(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">  console.log(<span class="string">&#x27;image load successful&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line">你可以把 img 替换为其他的 ID 或者 class 来检查指定图片是否加载完成。</span><br></pre></td></tr></table></figure>
+<h2 id="14-自动修改破损图像"><a href="#14-自动修改破损图像" class="headerlink" title="14.自动修改破损图像"></a>14.自动修改破损图像</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">如果你碰巧在你的网站上发现了破碎的图像链接，你可以用一个不易被替换的图像来代替它们。添加这个简单的代码可以节省很多麻烦：</span><br><span class="line">$(<span class="string">&#x27;img&#x27;</span>).on(<span class="string">&#x27;error&#x27;</span>, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">  $(this).prop(<span class="string">&#x27;src&#x27;</span>, <span class="string">&#x27;img/broken.png&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line">即使你的网站没有破碎的图像链接，添加这段代码也没有任何害处。</span><br></pre></td></tr></table></figure>
+<h2 id="15-鼠标悬停-hover-切换-class-属性"><a href="#15-鼠标悬停-hover-切换-class-属性" class="headerlink" title="15.鼠标悬停(hover)切换 class 属性"></a>15.鼠标悬停(hover)切换 class 属性</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">假如当用户鼠标悬停在一个可点击的元素上时，你希望改变其效果，下面这段代码可以在其悬停在元素上时添加 class 属性，当用户鼠标离开时，则自动取消该 class 属性：</span><br><span class="line">$(<span class="string">&#x27;.btn&#x27;</span>).hover(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">  $(this).addClass(<span class="string">&#x27;hover&#x27;</span>);</span><br><span class="line">  &#125;, <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    $(this).removeClass(<span class="string">&#x27;hover&#x27;</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">你只需要添加必要的CSS代码即可。如果你想要更简洁的代码，可以使用 toggleClass 方法：</span><br><span class="line">$(<span class="string">&#x27;.btn&#x27;</span>).hover(<span class="function"><span class="title">function</span></span> () &#123; </span><br><span class="line">  $(this).toggleClass(<span class="string">&#x27;hover&#x27;</span>); </span><br><span class="line">&#125;);</span><br><span class="line">注：直接使用CSS实现该效果可能是更好的解决方案，但你仍然有必要知道该方法。</span><br></pre></td></tr></table></figure>
+<h2 id="16-禁用-input-字段"><a href="#16-禁用-input-字段" class="headerlink" title="16.禁用 input 字段"></a>16.禁用 input 字段</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">有时你可能需要禁用表单的 submit 按钮或者某个 input 字段，直到用户执行了某些操作（例如，检查“已阅读条款”复选框）。可以添加 disabled 属性，直到你想启用它时：</span><br><span class="line">$(<span class="string">&#x27;input[type=&quot;submit&quot;]&#x27;</span>).prop(<span class="string">&#x27;disabled&#x27;</span>, <span class="literal">true</span>);</span><br><span class="line">你要做的就是执行 removeAttr 方法，并把要移除的属性作为参数传入：</span><br><span class="line">$(<span class="string">&#x27;input[type=&quot;submit&quot;]&#x27;</span>).removeAttr(<span class="string">&#x27;disabled&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="17-阻止链接加载"><a href="#17-阻止链接加载" class="headerlink" title="17.阻止链接加载"></a>17.阻止链接加载</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">有时你不希望链接到某个页面或者重新加载它，你可能希望它来做一些其他事情或者触发一些其他脚本，你可以这么做：</span><br><span class="line">$(<span class="string">&#x27;a.no-link&#x27;</span>).click(<span class="keyword">function</span> (e) &#123;</span><br><span class="line">  e.preventDefault();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="18-切换-fade-x2F-slide"><a href="#18-切换-fade-x2F-slide" class="headerlink" title="18.切换 fade&#x2F;slide"></a>18.切换 fade&#x2F;slide</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">fade 和 slide 是我们在 jQuery 中经常使用的动画效果，它们可以使元素显示效果更好。但是如果你希望元素显示时使用第一种效果，而消失时使用第二种效果，则可以这么做：</span><br><span class="line">// Fade</span><br><span class="line">$(<span class="string">&#x27;.btn&#x27;</span>).click(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">  $(<span class="string">&#x27;.element&#x27;</span>).fadeToggle(<span class="string">&#x27;slow&#x27;</span>);</span><br><span class="line">&#125;);</span><br><span class="line">// Toggle</span><br><span class="line">$(<span class="string">&#x27;.btn&#x27;</span>).click(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">  $(<span class="string">&#x27;.element&#x27;</span>).slideToggle(<span class="string">&#x27;slow&#x27;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="19-简单的手风琴效果"><a href="#19-简单的手风琴效果" class="headerlink" title="19.简单的手风琴效果"></a>19.简单的手风琴效果</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">这是一个实现手风琴效果快速简单的方法：</span><br><span class="line">// Close all panels</span><br><span class="line">$(<span class="string">&#x27;#accordion&#x27;</span>).find(<span class="string">&#x27;.content&#x27;</span>).hide();</span><br><span class="line">// Accordion</span><br><span class="line">$(<span class="string">&#x27;#accordion&#x27;</span>).find(<span class="string">&#x27;.accordion-header&#x27;</span>).click(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">  var next = $(this).next();</span><br><span class="line">  next.slideToggle(<span class="string">&#x27;fast&#x27;</span>);</span><br><span class="line">  $(<span class="string">&#x27;.content&#x27;</span>).not(next).slideUp(<span class="string">&#x27;fast&#x27;</span>);</span><br><span class="line">  <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="20-让两个-DIV-高度相同"><a href="#20-让两个-DIV-高度相同" class="headerlink" title="20.让两个 DIV 高度相同"></a>20.让两个 DIV 高度相同</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">有时你需要让两个 div 高度相同，而不管它们里面的内容多少。可以使用下面的代码片段：</span><br><span class="line">var <span class="variable">$columns</span> = $(<span class="string">&#x27;.column&#x27;</span>);</span><br><span class="line">var height = 0;</span><br><span class="line"><span class="variable">$columns</span>.each(<span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">  <span class="keyword">if</span> ($(this).height() &gt; height) &#123;</span><br><span class="line">    height = $(this).height();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="variable">$columns</span>.height(height);</span><br><span class="line">这段代码会循环一组元素，并设置它们的高度为元素中的最大高。</span><br></pre></td></tr></table></figure>
+<h2 id="21-验证元素是否为空"><a href="#21-验证元素是否为空" class="headerlink" title="21. 验证元素是否为空"></a>21. 验证元素是否为空</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">This will allow you to check <span class="keyword">if</span> an element is empty.</span><br><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">  <span class="keyword">if</span> ($(<span class="string">&#x27;#id&#x27;</span>).html()) &#123;</span><br><span class="line">   // <span class="keyword">do</span> something</span><br><span class="line">   &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="22-替换元素"><a href="#22-替换元素" class="headerlink" title="22. 替换元素"></a>22. 替换元素</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">   $(<span class="string">&#x27;#id&#x27;</span>).replaceWith(<span class="string">&#x27;</span></span><br><span class="line"><span class="string">&lt;DIV&gt;I have been replaced&lt;/DIV&gt;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&#x27;</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="23-jQuery延时加载功能"><a href="#23-jQuery延时加载功能" class="headerlink" title="23. jQuery延时加载功能"></a>23. jQuery延时加载功能</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">   window.setTimeout(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">     // <span class="keyword">do</span> something</span><br><span class="line">   &#125;, 1000);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="24-移除单词功能"><a href="#24-移除单词功能" class="headerlink" title="24. 移除单词功能"></a>24. 移除单词功能</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">   var el = $(<span class="string">&#x27;#id&#x27;</span>);</span><br><span class="line">   el.html(el.html().replace(/word/ig, <span class="string">&quot;&quot;</span>));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="25-验证元素是否存在于jquery对象集合中"><a href="#25-验证元素是否存在于jquery对象集合中" class="headerlink" title="25. 验证元素是否存在于jquery对象集合中"></a>25. 验证元素是否存在于jquery对象集合中</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">   <span class="keyword">if</span> ($(<span class="string">&#x27;#id&#x27;</span>).length) &#123;</span><br><span class="line">  // <span class="keyword">do</span> something</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="26-使整个DIV可点击"><a href="#26-使整个DIV可点击" class="headerlink" title="26. 使整个DIV可点击"></a>26. 使整个DIV可点击</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">    $(<span class="string">&quot;div&quot;</span>).click(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">      //get the url from href attribute and launch the url</span><br><span class="line">      window.location=$(this).find(<span class="string">&quot;a&quot;</span>).attr(<span class="string">&quot;href&quot;</span>); <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">// how to use</span><br><span class="line">&lt;DIV&gt;&lt;A href=<span class="string">&quot;index.html&quot;</span>&gt;home&lt;/A&gt;&lt;/DIV&gt;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="27-ID与Class之间转换"><a href="#27-ID与Class之间转换" class="headerlink" title="27. ID与Class之间转换"></a>27. ID与Class之间转换</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">当改变Window大小时，在ID与Class之间切换</span><br><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">   <span class="keyword">function</span> <span class="function"><span class="title">checkWindowSize</span></span>() &#123;</span><br><span class="line">    <span class="keyword">if</span> ( $(window).width() &gt; 1200 ) &#123;</span><br><span class="line">        $(<span class="string">&#x27;body&#x27;</span>).addClass(<span class="string">&#x27;large&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        $(<span class="string">&#x27;body&#x27;</span>).removeClass(<span class="string">&#x27;large&#x27;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">   &#125;</span><br><span class="line">$(window).resize(checkWindowSize);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="28-克隆对象"><a href="#28-克隆对象" class="headerlink" title="28. 克隆对象"></a>28. 克隆对象</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">   var cloned = $(<span class="string">&#x27;#id&#x27;</span>).<span class="built_in">clone</span>();</span><br><span class="line">// how to use</span><br><span class="line">&lt;DIV <span class="built_in">id</span>=<span class="built_in">id</span>&gt;&lt;/DIV&gt;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="29-使元素居屏幕中间位置"><a href="#29-使元素居屏幕中间位置" class="headerlink" title="29. 使元素居屏幕中间位置"></a>29. 使元素居屏幕中间位置</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">  jQuery.fn.center = <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">      this.css(<span class="string">&quot;position&quot;</span>,<span class="string">&quot;absolute&quot;</span>);</span><br><span class="line">      this.css(<span class="string">&quot;top&quot;</span>, ( $(window).height() - this.height() ) / 2+$(window).scrollTop() + <span class="string">&quot;px&quot;</span>);</span><br><span class="line">      this.css(<span class="string">&quot;left&quot;</span>, ( $(window).width() - this.width() ) / 2+$(window).scrollLeft() + <span class="string">&quot;px&quot;</span>);</span><br><span class="line">      <span class="built_in">return</span> this;</span><br><span class="line">  &#125;</span><br><span class="line">  $(<span class="string">&quot;#id&quot;</span>).center();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="30-写自己的选择器"><a href="#30-写自己的选择器" class="headerlink" title="30. 写自己的选择器"></a>30. 写自己的选择器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">   $.extend($.<span class="built_in">expr</span>[<span class="string">&#x27;:&#x27;</span>], &#123;</span><br><span class="line">       moreThen1000px: <span class="keyword">function</span>(a) &#123;</span><br><span class="line">           <span class="built_in">return</span> $(a).width() &gt; 1000;</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;);</span><br><span class="line">  $(<span class="string">&#x27;.box:moreThen1000px&#x27;</span>).click(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">      // creating a simple js alert box</span><br><span class="line">      alert(<span class="string">&#x27;The element that you have clicked is over 1000 pixels wide&#x27;</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="31-统计元素个数"><a href="#31-统计元素个数" class="headerlink" title="31. 统计元素个数"></a>31. 统计元素个数</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">   $(<span class="string">&quot;p&quot;</span>).size();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="32-使用自己的-Bullets"><a href="#32-使用自己的-Bullets" class="headerlink" title="32. 使用自己的 Bullets"></a>32. 使用自己的 Bullets</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">   $(<span class="string">&quot;ul&quot;</span>).addClass(<span class="string">&quot;Replaced&quot;</span>);</span><br><span class="line">   $(<span class="string">&quot;ul &gt; li&quot;</span>).prepend(<span class="string">&quot;‒ &quot;</span>);</span><br><span class="line"> // how to use</span><br><span class="line"> ul.Replaced &#123; list-style : none; &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="33-引用Google主机上的Jquery类库"><a href="#33-引用Google主机上的Jquery类库" class="headerlink" title="33. 引用Google主机上的Jquery类库"></a>33. 引用Google主机上的Jquery类库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">//Example 1</span><br><span class="line">&lt;SCRIPT src=<span class="string">&quot;http://www.google.com/jsapi&quot;</span>&gt;&lt;/SCRIPT&gt;</span><br><span class="line">&lt;SCRIPT <span class="built_in">type</span>=text/javascript&gt;</span><br><span class="line">google.load(<span class="string">&quot;jquery&quot;</span>, <span class="string">&quot;1.2.6&quot;</span>);</span><br><span class="line">google.setOnLoadCallback(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">    // <span class="keyword">do</span> something</span><br><span class="line">&#125;);</span><br><span class="line">&lt;/SCRIPT&gt;&lt;SCRIPT <span class="built_in">type</span>=text/javascript src=<span class="string">&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js&quot;</span>&gt;&lt;/SCRIPT&gt;</span><br><span class="line"></span><br><span class="line"> // Example 2:(the best and fastest way)</span><br><span class="line">&lt;SCRIPT <span class="built_in">type</span>=text/javascript src=<span class="string">&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js&quot;</span>&gt;&lt;/SCRIPT&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="34-禁用Jquery（动画）效果"><a href="#34-禁用Jquery（动画）效果" class="headerlink" title="34. 禁用Jquery（动画）效果"></a>34. 禁用Jquery（动画）效果</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">    jQuery.fx.off = <span class="literal">true</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="35-与其他Javascript类库冲突解决方案"><a href="#35-与其他Javascript类库冲突解决方案" class="headerlink" title="35. 与其他Javascript类库冲突解决方案"></a>35. 与其他Javascript类库冲突解决方案</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(document).ready(<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">   var <span class="variable">$jq</span> = jQuery.noConflict();</span><br><span class="line">   <span class="variable">$jq</span>(<span class="string">&#x27;#id&#x27;</span>).show();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+      
+       
+      
+      
+      <div>
+        <blockquote>
+            <strong>本文作者：</strong>
             
-  
-    <article id="post-Java链表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-   
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/03/Java%E9%93%BE%E8%A1%A8/">Java链表</a>
-    </h1>
-  
-
-        
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一、List-列表"><a href="#一、List-列表" class="headerlink" title="一、List(列表)"></a>一、List(列表)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">List的元素以线性方式存储，可以存放重复对象，List主要有以下两个实现类：</span><br><span class="line">ArrayList : 长度可变的数组，可以对元素进行随机的访问，向ArrayList中插入与删除元素的速度慢。 JDK8 中ArrayList扩容的实现是通过grow()方法里使用语句newCapacity = oldCapacity + (oldCapacity &gt;&gt; 1)（即1.5倍扩容）计算容量，然后调用Arrays.copyof()方法进行对原数组进行复制。</span><br><span class="line">LinkedList: 采用链表数据结构，插入和删除速度快，但访问速度慢。</span><br><span class="line">进行存储顺序排序，可以用get下标顺序获取数据或者迭代器</span><br></pre></td></tr></table></figure>
-<h3 id="二、Set-集合"><a href="#二、Set-集合" class="headerlink" title="二、Set(集合)"></a>二、Set(集合)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Set中的对象不按特定(HashCode)的方式排序，并且没有重复对象，Set主要有以下两个实现类：</span><br><span class="line">HashSet： HashSet按照哈希算法来存取集合中的对象，存取速度比较快。当HashSet中的元素个数超过数组大小*loadFactor（默认值为0.75）时，就会进行近似两倍扩容（newCapacity = (oldCapacity &lt;&lt; <span class="string">1) + 1</span>）。</span><br><span class="line">TreeSet ：TreeSet实现了SortedSet接口，能够对集合中的对象进行排序。</span><br><span class="line">只能用迭代器获取，用于筛选重复数据</span><br><span class="line"><span class="comment">##三、Map(映射)</span></span><br><span class="line">Map是一种把键对象和值对象映射的集合，它的每一个元素都包含一个键对象和值对象。 Map主要有以下两个实现类：</span><br><span class="line">HashMap：HashMap基于散列表实现，其插入和查询&lt;K,V&gt;的开销是固定的，可以通过构造器设置容量和负载因子来调整容器的性能。</span><br><span class="line">LinkedHashMap：类似于HashMap，但是迭代遍历它时，取得&lt;K,V&gt;的顺序是其插入次序，或者是最近最少使用(LRU)的次序。</span><br><span class="line">TreeMap：TreeMap基于红黑树实现。查看&lt;K,V&gt;时，它们会被排序。TreeMap是唯一的带有subMap()方法的Map，subMap()可以返回一个子树。</span><br><span class="line">HashMap</span><br><span class="line">底层实现：HashMap底层整体结构是一个数组，数组中的每个元素又是一个链表。每次添加一个对象（put）时会产生一个链表对象（Object类型），Map中的每个Entry就是数组中的一个元素（Map.Entry就是一个&lt;Key,Value&gt;），它具有由当前元素指向下一个元素的引用，这就构成了链表。</span><br><span class="line">  存储原理：当向HsahMap中添加元素的时候，先根据HashCode重新计算Key的Hash值，得到数组下标，如果数组该位置已经存在其他元素，那么这个位置的元素将会以链表的形式存放，新加入的放在链头，最先加入的放在链尾，如果数组该位置元素不存在，那么就直接将该元素放到此数组中的该位置。</span><br><span class="line">  去重原理：不同的Key算到数组下标相同的几率很小，新建一个&lt;K,V&gt;放入到HashMap的时候，首先会计算Key的数组下标，如果数组该位置已经存在其他元素，则比较两个Key，若相同则覆盖写入，若不同则形成链表。</span><br><span class="line">  读取原理：从HashMap中读取（get）元素时，首先计算Key的HashCode，找到数组下标，然后在对应位置的链表中找到需要的元素。hashCode()值存储通过存储栈中的指针的值。</span><br><span class="line">  扩容机制：当HashMap中的元素个数超过数组大小*loadFactor（默认值为0.75）时，就会进行2倍扩容（oldThr &lt;&lt; <span class="string">1）。</span></span><br></pre></td></tr></table></figure>
-<h3 id="四、使用区别"><a href="#四、使用区别" class="headerlink" title="四、使用区别"></a>四、使用区别</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">List和Set是实现了Collection接口；</span><br><span class="line">List：有序访问、索引访问</span><br><span class="line">Set(HashSet、LinkedHashSet 或者 TreeSet)：去重</span><br><span class="line">Map：键值存储</span><br><span class="line">如果你经常会使用索引来对容器中的元素进行访问，那么 List 是你的正确的选择。如果你已经知道索引了的话，那么 List 的实现类比如 ArrayList 可以提供更快速的访问,如果经常添加删除元素的，那么肯定要选择LinkedList。</span><br><span class="line">如果你想容器中的元素能够按照它们插入的次序进行有序存储，那么还是 List，因为 List 是一个有序容器，它按照插入顺序进行存储。</span><br><span class="line">如果你想保证插入元素的唯一性，也就是你不想有重复值的出现，那么可以选择一个 Set 的实现类，比如 HashSet、LinkedHashSet 或者 TreeSet。所有 Set 的实现类都遵循了统一约束比如唯一性，而且还提供了额外的特性比如 TreeSet 还是一个 SortedSet，所有存储于 TreeSet 中的元素可以使用 Java 里的 Comparator 或者 Comparable 进行排序。LinkedHashSet 也按照元素的插入顺序对它们进行存储。</span><br><span class="line">如果你以键和值的形式进行数据存储那么 Map 是你正确的选择。你可以根据你的后续需要从 Hashtable、HashMap、TreeMap 中进行选择。</span><br></pre></td></tr></table></figure>
-<h3 id="一、ArrayList和LinkedList查询之间的区别"><a href="#一、ArrayList和LinkedList查询之间的区别" class="headerlink" title="一、ArrayList和LinkedList查询之间的区别"></a>一、ArrayList和LinkedList查询之间的区别</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">首先，从名字就可以看出，ArrayList和LinkedList的区别，ArrayList是基于数组的，LinkedList是基于链表的。</span><br><span class="line">从这一点，我们可以推理出来，ArrayList适合查询，LinkedList适合插入，但是这只是一个广泛的结论，我们应该了解的更细致一点。</span><br><span class="line">比如，对于ArrayList，它真正的优点是按下标查询元素，相比于LinkedList，LinkedList也可以按下标查询元素，但是LinkedList需要对底层链表进行遍历，才能找到指定下标的元素，而ArrayList不用，所以这是ArrayList的优点。</span><br><span class="line">但是，如果我们讨论的是获取第一个元素，或最后一个元素，ArrayList和LinkedList在性能上是没有区别的，因为LinkedList中有两个属性分别记录了当前链表中的头结点和尾结点，并不需要遍历链表。</span><br><span class="line">以上，是对于ArrayList和LinkedList在查询方面的区别。</span><br><span class="line">ArrayList  连续 内存存储  存储类型统一  (动态数组)</span><br><span class="line">LinkedList 分散 内存存储  链表指针查询 没有存储类型规定   删除插入简单</span><br><span class="line">默认情况下，比如调用ArrayList和LinkedList的add(e)方法，都是插入在最后，如果这种操作比较多，那么就用LinkedList，因为不涉及到扩容。</span><br><span class="line">2.如果调用ArrayList和LinkedList的add(index, e)方法比较多，就要具体考虑了，因为ArrayList可能会扩容，LinkedList需要遍历链表，这两种到底哪种更快，是没有结论的，得具体情况具体分析。</span><br><span class="line">3.还有，如果是插入场景比较少，但经常需要查询的话，查询分两种，第一种就是普通遍历，也就是经常需要对List中的元素进行遍历，那么这两种是区别不大的，遍历链表和遍历数组的区别，第二种就是经常需要按指定下标获取List中的元素，如果这种情况如果比较多，那么就用ArrayList</span><br><span class="line"></span><br><span class="line">hashmap、hashtable  .HashMap是Hashtable的轻量级实现（非线程安全的实现），他们都完成了Map接口，主要区别在于HashMap允许空（null）键值（key）,由于非线程安全，在只有一个线程访问的情况下，效率要高于Hashtable。</span><br><span class="line">最大的不同是，Hashtable的方法是Synchronize的，而HashMap不是，在多个线程访问Hashtable时，不需要自己为它的方法实现同步，而HashMap就必须为之提供同步。</span><br></pre></td></tr></table></figure>
-
-
-      
+              MR.Zhang 博客
+            
+            <br>  <strong>本文链接：</strong>  https://zhangyu921996508.github.io/2023/03/06/js001/
+            <br>
+            <strong>版权声明：</strong>
+            本作品采用  <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+            进行许可。转载请注明出处！
+            
+              <br>
+              <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
+            
+          </blockquote>
+         
+          <hr>
+            <center><strong>乐于分享,专注互联网生活.</strong></center>
+          <hr>
+       </div>
        
-      
-      
-      <div hidden="hidden"></div>
-    
 
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zfb0001.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wx0001.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -200,7 +292,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">js,jq,java</a>
         		</li>
       		
 		</ul>
@@ -209,16 +301,84 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/03/Java%E9%93%BE%E8%A1%A8/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://zhangyu921996508.github.io/2023/03/06/js001/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2023/03/06/Mysql001/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Mysql执行过程
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/03/06/spring0001/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Spring 概述</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -238,263 +398,14 @@
 
 
 
-
-  
-    <article id="post-Maven" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-   
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/03/Maven/">Maven</a>
-    </h1>
-  
-
-        
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Maven-安装-操作"><a href="#Maven-安装-操作" class="headerlink" title="Maven 安装 操作"></a>Maven 安装 操作</h3><h2 id="项目常用mvn命令"><a href="#项目常用mvn命令" class="headerlink" title="项目常用mvn命令"></a>项目常用mvn命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mvn clean install</span><br><span class="line">mvn  -T 4C clean <span class="built_in">test</span> -Dcheckstyle.skip=<span class="literal">false</span>  -Dlicese.skip=<span class="literal">false</span></span><br><span class="line">运行验证</span><br><span class="line">mvn  validate</span><br><span class="line">mvn 基本命令</span><br><span class="line">删除target目录</span><br><span class="line">mvn clean</span><br></pre></td></tr></table></figure>
-<p>编译操作 </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">主程序编译 mvn complie 存放目录traget/classes</span><br><span class="line">测试程序编译 Mvn <span class="built_in">test</span> -compile  target/test-classes</span><br></pre></td></tr></table></figure>
-
-<p>测试操作</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mvn <span class="built_in">test</span></span><br><span class="line">测试报告目录存放目录 target/surefire-repots</span><br><span class="line">打包操作 打Jar包</span><br><span class="line">mvn package</span><br></pre></td></tr></table></figure>
-
-<p>安装操作</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mvn  install</span><br><span class="line">将本地构建之后生成的Jar包存入本地的MaVen仓库。路径是根据项目的Maven坐标生成</span><br></pre></td></tr></table></figure>
-
-<p>只打包不测试</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Mvn package -Dmaven.test.skip=<span class="literal">true</span> (跳过测试代码的编译)</span><br><span class="line">mvn dependency:tree  看到依赖树</span><br><span class="line">mvn dependency :analyse 查看依赖的工具</span><br><span class="line"></span><br><span class="line">只打包不测试</span><br><span class="line">Mvn -Dtest package </span><br><span class="line">指定端口</span><br><span class="line">mvn -Dmaven.tmocat.port=9090</span><br><span class="line">忽略测试失败</span><br><span class="line">mvn -Dmaven.test.failure.ignore=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
-      
-       
-      
-      
-      <div hidden="hidden"></div>
-    
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Maven</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/03/Maven/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-第一篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-   
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/02/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">第一篇博客</a>
-    </h1>
-  
-
-        
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="dexo-安装-操作"><a href="#dexo-安装-操作" class="headerlink" title="dexo 安装 操作"></a>dexo 安装 操作</h3><pre><code class="bash">查看版本：cnpm -v
-   
-验证：hexo -v
-初始化hexo：hexo init
-新建文章：hexo n &quot;my first blog&quot;
-启动博客（或是在之后预览）:hexo s
-然后清理缓存：hexo clean
-生成：hexo g
-启动：hexo s
-
-cnpm install --save hexo-deployer-git
-</code></pre>
-<h3 id="x2F-x2F-注意空格"><a href="#x2F-x2F-注意空格" class="headerlink" title="&#x2F;&#x2F;注意空格"></a>&#x2F;&#x2F;注意空格</h3><pre><code>deploy:
-type: git
-repo: https://github.com/Zhang-Xiaohei/Zhang-Xiaohei.github.io.git
-branch: master
-
-样板放在  themes 文件下 如   themes/yilia
-</code></pre>
-
-      
-       
-      
-      
-      <div hidden="hidden"></div>
-    
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/02/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-   
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/02/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-       
-      
-      
-      <div hidden="hidden"></div>
-    
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/02/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -519,8 +430,8 @@ branch: master
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

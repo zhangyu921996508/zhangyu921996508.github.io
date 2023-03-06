@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://zhangyu921996508.github.io">
-  <title>MR.Zhang 博客</title>
+  <title>Spring 概述 | MR.Zhang 博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="MR.Zhang 博客">
-<meta property="og:url" content="https://zhangyu921996508.github.io/page/2/index.html">
+  <meta name="description" content="一、 什么是spring1spring是个java企业级应用的开源开发框架。spring主要用来开发web应用。但是有些扩展是针对建设j2EE平台的web应用。spring框架目标是简化java企业级应用开发，并通过pojo为基础的编程模式促进良好的编程习惯。 二、使用spring框架的好处是什么？123456789101112# 轻量：    spring是轻量的，基本的版本大约2M.# 控制反">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring 概述">
+<meta property="og:url" content="https://zhangyu921996508.github.io/2023/03/06/spring0001/index.html">
 <meta property="og:site_name" content="MR.Zhang 博客">
+<meta property="og:description" content="一、 什么是spring1spring是个java企业级应用的开源开发框架。spring主要用来开发web应用。但是有些扩展是针对建设j2EE平台的web应用。spring框架目标是简化java企业级应用开发，并通过pojo为基础的编程模式促进良好的编程习惯。 二、使用spring框架的好处是什么？123456789101112# 轻量：    spring是轻量的，基本的版本大约2M.# 控制反">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-03-06T01:41:05.211Z">
+<meta property="article:modified_time" content="2023-03-06T02:29:36.099Z">
 <meta property="article:author" content="MR.Zhang 博客">
+<meta property="article:tag" content="Java,Spring">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="MR.Zhang 博客" type="application/atom+xml">
@@ -160,36 +165,128 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
+            <article id="post-spring0001" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+   
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Spring 概述
+    </h1>
+  
+
+        
+        
+        <a href="/2023/03/06/spring0001/" class="archive-article-date">
+  	<time datetime="2023-03-06T01:41:05.211Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、-什么是spring"><a href="#一、-什么是spring" class="headerlink" title="一、 什么是spring"></a>一、 什么是spring</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spring是个java企业级应用的开源开发框架。spring主要用来开发web应用。但是有些扩展是针对建设j2EE平台的web应用。spring框架目标是简化java企业级应用开发，并通过pojo为基础的编程模式促进良好的编程习惯。</span><br></pre></td></tr></table></figure>
+<h2 id="二、使用spring框架的好处是什么？"><a href="#二、使用spring框架的好处是什么？" class="headerlink" title="二、使用spring框架的好处是什么？"></a>二、使用spring框架的好处是什么？</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 轻量：</span></span><br><span class="line">    spring是轻量的，基本的版本大约2M.</span><br><span class="line"><span class="comment"># 控制反转：</span></span><br><span class="line">    spring通过控制反转实现了松散耦合，对象们给出他们的依赖，而不是创建或者查找依赖的对象们。</span><br><span class="line"><span class="comment"># 面向切面的编程（Aop）:</span></span><br><span class="line">    spring支持面向切面的编程，并且把应用业务逻辑和系统服务分开。</span><br><span class="line"><span class="comment"># mvc框架：</span></span><br><span class="line">    spring的web框架是个精心设计的框架是web框架的一个很好的替代品。</span><br><span class="line"><span class="comment"># 事务管理：</span></span><br><span class="line">    spring提供一个持续的事务管理接口，可以扩展到上至本地事务下至全事(JTA）。</span><br><span class="line"><span class="comment"># 异常处理：</span></span><br><span class="line">    spring提供方便的api把具体技术相关的异常（比如由JDBC，Hibernate or JDo抛出的）转化啊为一致的unchecked异常。</span><br></pre></td></tr></table></figure>
+<h2 id="三、spring是由那些模块组成？"><a href="#三、spring是由那些模块组成？" class="headerlink" title="三、spring是由那些模块组成？"></a>三、spring是由那些模块组成？</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">以下是spring框架的基本模块：</span><br><span class="line">core module</span><br><span class="line">Bean module</span><br><span class="line">Context module</span><br><span class="line">Experssion Language module</span><br><span class="line">JDBC module</span><br><span class="line">ORM  module</span><br><span class="line">OXM  module</span><br><span class="line">Java Messaging Service(JMS)module</span><br><span class="line">Transaction module</span><br><span class="line">Web module</span><br><span class="line">Web-Servlet module</span><br><span class="line">Web-struts module</span><br><span class="line">Web-Portlet module</span><br></pre></td></tr></table></figure>
+<h2 id="四、核心容器（应用上下文）模块"><a href="#四、核心容器（应用上下文）模块" class="headerlink" title="四、核心容器（应用上下文）模块"></a>四、核心容器（应用上下文）模块</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是基本的spring模块，提供spring框架的基本功能，beanFactory是任何以spring为基础的应用的核心。spring框架建立在此模块之上，它使spring的成为一个容器。</span><br></pre></td></tr></table></figure>
+<h2 id="五、BeanFactory-BeanFactory实现举例"><a href="#五、BeanFactory-BeanFactory实现举例" class="headerlink" title="五、BeanFactory-BeanFactory实现举例"></a>五、BeanFactory-BeanFactory实现举例</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Bean工厂是工厂模式的一个实现，提供了控制反转功能，用来把应用的配置和依赖从正真的应用代码中分离。</span><br><span class="line">最常用的BeanFactory实现是XmlBeanFactory类。</span><br></pre></td></tr></table></figure>
+<h2 id="六、XMLBeanFactory"><a href="#六、XMLBeanFactory" class="headerlink" title="六、XMLBeanFactory"></a>六、XMLBeanFactory</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">最常用的就是or.springframework.beans.factory.xml.XmlBeanFactory,它是根据XML文件中的定义加载beans。该容器从XML文件读取配置元数据并用它去创建一个完全配置的系统或者应用。</span><br></pre></td></tr></table></figure>
+<h2 id="七、解释aop模块"><a href="#七、解释aop模块" class="headerlink" title="七、解释aop模块"></a>七、解释aop模块</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aop模块用于发给我们的spring应用做面向切面的开发，很多支持由aop联盟提供，这样就确保了spring和其他aop框架的共通行。这个模块将元数据编程引入spring。</span><br></pre></td></tr></table></figure>
+<h2 id="八、解释JDBC抽象和DAO模块"><a href="#八、解释JDBC抽象和DAO模块" class="headerlink" title="八、解释JDBC抽象和DAO模块"></a>八、解释JDBC抽象和DAO模块</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">通过使用JDBC抽象和DAO模块，保证数据代码的简洁并能避免数据库资源错误关闭导致的问题，它在避免数据库资源错误关闭导致的问题，它在各种不同的数据库的错误信息之上，提供了一个统一的异常访问层。它还利用spring的aop模块给spring应用中的对象提供事务管理服务。</span><br></pre></td></tr></table></figure>
+<h2 id="九、解释对象-x2F-关系映射集成模板"><a href="#九、解释对象-x2F-关系映射集成模板" class="headerlink" title="九、解释对象&#x2F;关系映射集成模板"></a>九、解释对象&#x2F;关系映射集成模板</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spring通过提供ORM模块，支持我们在直接jdbc之上使用一个对象/关系映射（ORM）工具，spring支持集成主流的ORM框架，如Hiberate，JDO和iBATIS SQL Maps。spring的事物管理同样支持以上所有ORM框架及JDBC。</span><br></pre></td></tr></table></figure>
+<h2 id="十、解释WEB模块"><a href="#十、解释WEB模块" class="headerlink" title="十、解释WEB模块"></a>十、解释WEB模块</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spring的WEB模块是构建在applicable context模块的基础之上，提供一个适合WEB应用的上下文。这个模块也包括支持多种面向web的任务，如透明地处理多个文件上传请求和程序级请求参数的绑定到你的业务对象。它也有对JakartaStruts的支持。</span><br></pre></td></tr></table></figure>
+<h2 id="十一、spring配置文件"><a href="#十一、spring配置文件" class="headerlink" title="十一、spring配置文件"></a>十一、spring配置文件</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spring配置文件是个xml文件，这个文件包含了类信息，描述了如何配置他们，以及如何相互调用。</span><br></pre></td></tr></table></figure>
+<h2 id="十二、什么是spring-iOC-容器"><a href="#十二、什么是spring-iOC-容器" class="headerlink" title="十二、什么是spring iOC 容器"></a>十二、什么是spring iOC 容器</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spring IOC  负责创建对象，管理对象（通过依赖注入（DI）），装配对象，配置对象，并且管理这些对象的整个生命周期。</span><br></pre></td></tr></table></figure>
+<h2 id="十三、ioc的优点是什么？"><a href="#十三、ioc的优点是什么？" class="headerlink" title="十三、ioc的优点是什么？"></a>十三、ioc的优点是什么？</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ioc或依赖注入把应用的代码量降到最低。它使应容易测试，单元测试不再需要单例和JNDI查找机制。最小的代价和最小的侵入性使松散耦合得以实现。IOC容器支持加载服务时的饿汉初始化和懒加载。</span><br></pre></td></tr></table></figure>
+<h2 id="十四、applicationContext通常的实现是什么"><a href="#十四、applicationContext通常的实现是什么" class="headerlink" title="十四、applicationContext通常的实现是什么"></a>十四、applicationContext通常的实现是什么</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FileSystemXmlApplicationContext：此容器从一个XML文件中加载beans的定义，XML Bean配置文件的全路径名必须提供给它的构造函数。ClasspathXmlApplicationContext：此容器也从一个XML文件中加载beans的定义，这里，你需要正确设置classpath因为这个容器将在classpath里找bean的配置。WebXmlApplicationContext:此容器加载一个XML文件，此文件定义一个WEB应用的所有bean。</span><br></pre></td></tr></table></figure>
+<h2 id="十五、Bean工厂和Applicationcontexts有什么区别？"><a href="#十五、Bean工厂和Applicationcontexts有什么区别？" class="headerlink" title="十五、Bean工厂和Applicationcontexts有什么区别？"></a>十五、Bean工厂和Applicationcontexts有什么区别？</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Application contexts    提供一个方法处理文本消息，一个通常的做法是加载文本资源（比如镜像），它们可以向注册为监听器的bean发布事件。另那些不得不由bean工厂以程序化方式处理的操作，可以在Application contexts中以声明的方式处理。Application contexts实现了MessageSource接口，该接口的实现以可插拨的方式提供获取本地化消息的方法</span><br></pre></td></tr></table></figure>
+<h2 id="十六、一个spring的应用看起来像什么？"><a href="#十六、一个spring的应用看起来像什么？" class="headerlink" title="十六、一个spring的应用看起来像什么？"></a>十六、一个spring的应用看起来像什么？</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">一个定义一些功能的接口。这实现包括属性，它的setter，getter方法和函数等。spring AOP。spring的XML配置文件。使用以上功能的客户端程序</span><br></pre></td></tr></table></figure>
+<h2 id="十七、什么是spring的依赖注入？"><a href="#十七、什么是spring的依赖注入？" class="headerlink" title="十七、什么是spring的依赖注入？"></a>十七、什么是spring的依赖注入？</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">依赖注入，是IOC的一方面，是个通常的概念，它有多种解释。这个概念是说你不用创建对象，而只需要描述它如何被创建。你不在代码里直接组装你的组件和服务，但是要在配置文件里描述那些组件需要那些服务，之后一个容器（IOC容器）负责把他们组装起来。</span><br></pre></td></tr></table></figure>
+<h2 id="十八、有哪些不同类型的IOC（依赖注入）方式？"><a href="#十八、有哪些不同类型的IOC（依赖注入）方式？" class="headerlink" title="十八、有哪些不同类型的IOC（依赖注入）方式？"></a>十八、有哪些不同类型的IOC（依赖注入）方式？</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">构造器依赖注入：构造器依赖注入通过容器触发一个类的构造器来实现的，该类有一系列参数，每个参数代表一个对其他类的依赖。Setter方法注入：Setter方法注入是容器通过调用无参构造器或者无参static工厂方法实例化bean之后，调用该bean的setter方法。即实现了基于setter的依赖注入。</span><br><span class="line">哪种依赖注入方式你建议使用，构造器注入，还是 Setter方法注入？</span><br><span class="line">你两种依赖方式都可以使用，构造器注入和Setter方法注入。最好的解决方案是用构造器参数实现强制依赖，setter方法实现可选依赖。</span><br></pre></td></tr></table></figure>
+<h3 id="Spring-Beans"><a href="#Spring-Beans" class="headerlink" title="Spring Beans"></a>Spring Beans</h3><h2 id="20-什么是Spring-beans"><a href="#20-什么是Spring-beans" class="headerlink" title="20.什么是Spring beans?"></a>20.什么是Spring beans?</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Spring beans 是那些形成Spring应用的主干的java对象。它们被Spring IOC容器初始化，装配，和管理。这些beans通过容器中配置的元数据创建。比如，以XML文件中&lt;bean/&gt; 的形式定义。</span><br><span class="line">Spring 框架定义的beans都是单件beans。在bean tag中有个属性”singleton”，如果它被赋为TRUE，bean 就是单件，否则就是一个 prototype bean。默认是TRUE，所以所有在Spring框架中的beans 缺省都是单件。</span><br><span class="line">一个 Spring Bean 定义 包含什么？</span><br><span class="line">一个Spring Bean 的定义包含容器必知的所有配置元数据，包括如何创建一个bean，它的生命周期详情及它的依赖。</span><br><span class="line">如何给Spring 容器提供配置元数据?</span><br><span class="line">这里有三种重要的方法给Spring 容器提供配置元数据。</span><br><span class="line">XML配置文件。</span><br><span class="line">基于注解的配置。</span><br><span class="line">基于java的配置。</span><br><span class="line">你怎样定义类的作用域?</span><br><span class="line">当定义一个&lt;bean&gt; 在Spring里，我们还能给这个bean声明一个作用域。它可以通过bean 定义中的scope属性来定义。如，当Spring要在需要的时候每次生产一个新的bean实例，bean的scope属性被指定为prototype。另一方面，一个bean每次使用的时候必须返回同一个实例，这个bean的scope 属性 必须设为 singleton。</span><br></pre></td></tr></table></figure>
+<p>解释Spring支持的几种bean的作用域。</p>
+<h2 id="Spring框架支持以下五种bean的作用域："><a href="#Spring框架支持以下五种bean的作用域：" class="headerlink" title="Spring框架支持以下五种bean的作用域："></a>Spring框架支持以下五种bean的作用域：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">singleton : bean在每个Spring ioc 容器中只有一个实例。（单例）</span><br><span class="line">prototype：一个bean的定义可以有多个实例。(原型)</span><br><span class="line">request：每次http请求都会创建一个bean，该作用域仅在基于web的Spring ApplicationContext情形下有效。（请求）</span><br><span class="line">session：在一个HTTP Session中，一个bean定义对应一个实例。该作用域仅在基于web的Spring ApplicationContext情形下有效。（会话）</span><br><span class="line">global-session：在一个全局的HTTP Session中，一个bean定义对应一个实例。该作用域仅在基于web的Spring ApplicationContext情形下有效。（全局会话）</span><br><span class="line">缺省的Spring bean 的作用域是Singleton。</span><br></pre></td></tr></table></figure>
+<h2 id="Spring框架中的单例bean是线程安全的吗"><a href="#Spring框架中的单例bean是线程安全的吗" class="headerlink" title="Spring框架中的单例bean是线程安全的吗?"></a>Spring框架中的单例bean是线程安全的吗?</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">不，Spring框架中的单例bean不是线程安全的。</span><br></pre></td></tr></table></figure>
+<h2 id="解释Spring框架中bean的生命周期。"><a href="#解释Spring框架中bean的生命周期。" class="headerlink" title="解释Spring框架中bean的生命周期。"></a>解释Spring框架中bean的生命周期。</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Spring容器 从XML 文件中读取bean的定义，并实例化bean。</span><br><span class="line">Spring根据bean的定义填充所有的属性(补充，依赖注入)，前置处理，初始化，aop动态代理，使用，动态销毁。</span><br></pre></td></tr></table></figure>
+
+<p>如果bean实现了BeanNameAware 接口，Spring 传递bean 的ID 到 setBeanName方法。<br>如果Bean 实现了 BeanFactoryAware 接口， Spring传递beanfactory 给setBeanFactory 方法。<br>如果有任何与bean相关联的BeanPostProcessors，Spring会在postProcesserBeforeInitialization()方法内调用它们。<br>如果bean实现IntializingBean了，调用它的afterPropertySet方法，如果bean声明了初始化方法，调用此初始化方法。<br>如果有BeanPostProcessors 和bean 关联，这些bean的postProcessAfterInitialization() 方法将被调用。<br>如果bean实现了 DisposableBean，它将调用destroy()方法。<br>哪些是重要的bean生命周期方法？ 你能重载它们吗？</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">有两个重要的bean 生命周期方法，第一个是setup ， 它是在容器加载bean的时候被调用。第二个方法是 teardown 它是在容器卸载类的时候被调用。</span><br><span class="line">The bean 标签有两个重要的属性（init-method和destroy-method）。用它们你可以自己定制初始化和注销方法。它们也有相应的注解（@PostConstruct和@PreDestroy）。</span><br></pre></td></tr></table></figure>
+<h2 id="什么是Spring的内部bean？-依赖注入"><a href="#什么是Spring的内部bean？-依赖注入" class="headerlink" title="什么是Spring的内部bean？(依赖注入)"></a>什么是Spring的内部bean？(依赖注入)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">当一个bean仅被用作另一个bean的属性时，它能被声明为一个内部bean，为了定义inner bean，在Spring 的 基于XML的 配置元数据中，可以在 &lt;property/&gt;或 &lt;constructor-arg/&gt; 元素内使用&lt;bean/&gt; 元素，内部bean通常是匿名的，它们的Scope一般是prototype。</span><br><span class="line">在 Spring中如何注入一个java集合？</span><br><span class="line">Spring提供以下几种集合的配置元素：</span><br><span class="line">&lt;list&gt;类型用于注入一列值，允许有相同的值。</span><br><span class="line">&lt;<span class="built_in">set</span>&gt; 类型用于注入一组值，不允许有相同的值。</span><br><span class="line">&lt;map&gt; 类型用于注入一组键值对，键和值都可以为任意类型。</span><br><span class="line">&lt;props&gt;类型用于注入一组键值对，键和值都只能为String类型。</span><br></pre></td></tr></table></figure>
+<h2 id="什么是bean装配？"><a href="#什么是bean装配？" class="headerlink" title="什么是bean装配？"></a>什么是bean装配？</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">装配，或bean 装配是指在Spring 容器中把bean组装到一起，前提是容器需要知道bean的依赖关系，如何通过依赖注入来把它们装配到一起。</span><br></pre></td></tr></table></figure>
+<h2 id="什么是bean的自动装配？"><a href="#什么是bean的自动装配？" class="headerlink" title="什么是bean的自动装配？"></a>什么是bean的自动装配？</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Spring 容器能够自动装配相互合作的bean，这意味着容器不需要&lt;constructor-arg&gt;和&lt;property&gt;配置，能通过Bean工厂自动处理bean之间的协作。</span><br></pre></td></tr></table></figure>
+<h2 id="解释不同方式的自动装配-。"><a href="#解释不同方式的自动装配-。" class="headerlink" title="解释不同方式的自动装配 。"></a>解释不同方式的自动装配 。</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">有五种自动装配的方式，可以用来指导Spring容器用自动装配方式来进行依赖注入。</span><br><span class="line">no：默认的方式是不进行自动装配，通过显式设置ref 属性来进行装配。</span><br><span class="line">byName：通过参数名 自动装配，Spring容器在配置文件中发现bean的autowire属性被设置成byname，之后容器试图匹配、装配和该bean的属性具有相同名字的bean。</span><br><span class="line">byType:：通过参数类型自动装配，Spring容器在配置文件中发现bean的autowire属性被设置成byType，之后容器试图匹配、装配和该bean的属性具有相同类型的bean。如果有多个bean符合条件，则抛出错误。</span><br><span class="line">constructor：这个方式类似于byType， 但是要提供给构造器参数，如果没有确定的带参数的构造器参数类型，将会抛出异常。</span><br><span class="line">autodetect：首先尝试使用constructor来自动装配，如果无法工作，则使用byType方式。</span><br></pre></td></tr></table></figure>
+<h2 id="33-自动装配有哪些局限性"><a href="#33-自动装配有哪些局限性" class="headerlink" title="33.自动装配有哪些局限性 ?"></a>33.自动装配有哪些局限性 ?</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">自动装配的局限性是：</span><br><span class="line">重写： 你仍需用 &lt;constructor-arg&gt;和 &lt;property&gt; 配置来定义依赖，意味着总要重写自动装配。</span><br><span class="line">基本数据类型：你不能自动装配简单的属性，如基本数据类型，String字符串，和类。</span><br><span class="line">模糊特性：自动装配不如显式装配精确，如果有可能，建议使用显式装配。</span><br><span class="line">你可以在Spring中注入一个null 和一个空字符串吗？</span><br><span class="line">可以。</span><br></pre></td></tr></table></figure>
+<h2 id="Spring注解"><a href="#Spring注解" class="headerlink" title="Spring注解"></a>Spring注解</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">什么是基于Java的Spring注解配置? 给一些注解的例子。</span><br><span class="line">基于Java的配置，允许你在少量的Java注解的帮助下，进行你的大部分Spring配置而非通过XML文件。</span><br><span class="line">以@Configuration 注解为例，它用来标记类可以当做一个bean的定义，被Spring IOC容器使用。另一个例子是@Bean注解，它表示此方法将要返回一个对象，作为一个bean注册进Spring应用上下文。</span><br><span class="line">什么是基于注解的容器配置?</span><br><span class="line">相对于XML文件，注解型的配置依赖于通过字节码元数据装配组件，而非尖括号的声明。</span><br><span class="line">开发者通过在相应的类，方法或属性上使用注解的方式，直接组件类中进行配置，而不是使用xml表述bean的装配关系。</span><br><span class="line">怎样开启注解装配？</span><br><span class="line">注解装配在默认情况下是不开启的，为了使用注解装配，我们必须在Spring配置文件中配置 context:annotation-config/元素。</span><br><span class="line"><span class="comment"># @Required 注解</span></span><br><span class="line">这个注解表明bean的属性必须在配置的时候设置，通过一个bean定义的显式的属性值或通过自动装配，若@Required注解的bean属性未被设置，容器将抛出BeanInitializationException。</span><br><span class="line"><span class="comment"># @Autowired 注解</span></span><br><span class="line">@Autowired 注解提供了更细粒度的控制，包括在何处以及如何完成自动装配。它的用法和@Required一样，修饰setter方法、构造器、属性或者具有任意名称和/或多个参数的PN方法。</span><br><span class="line"><span class="comment"># @Qualifier 注解</span></span><br><span class="line">当有多个相同类型的bean却只有一个需要自动装配时，将@Qualifier 注解和@Autowire 注解结合使用以消除这种混淆，指定需要装配的确切的bean。</span><br></pre></td></tr></table></figure>
+<h2 id="Spring数据访问"><a href="#Spring数据访问" class="headerlink" title="Spring数据访问"></a>Spring数据访问</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">41.在Spring框架中如何更有效地使用JDBC?</span><br><span class="line">使用SpringJDBC 框架，资源管理和错误处理的代价都会被减轻。所以开发者只需写statements 和 queries从数据存取数据，JDBC也可以在Spring框架提供的模板类的帮助下更有效地被使用，这个模板叫JdbcTemplate （例子见这里here）</span><br><span class="line">JdbcTemplate</span><br><span class="line">JdbcTemplate 类提供了很多便利的方法解决诸如把数据库数据转变成基本数据类型或对象，执行写好的或可调用的数据库操作语句，提供自定义的数据错误处理。</span><br><span class="line">Spring对DAO的支持</span><br><span class="line">Spring对数据访问对象（DAO）的支持旨在简化它和数据访问技术如JDBC，Hibernate or JDO 结合使用。这使我们可以方便切换持久层。编码时也不用担心会捕获每种技术特有的异常。</span><br><span class="line">使用Spring通过什么方式访问Hibernate?</span><br><span class="line">在Spring中有两种方式访问Hibernate：</span><br><span class="line">控制反转 Hibernate Template和 Callback。</span><br><span class="line">继承 HibernateDAOSupport提供一个AOP 拦截器。</span><br><span class="line">Spring支持的ORM</span><br><span class="line">Spring支持以下ORM：</span><br><span class="line">Hibernate</span><br><span class="line">iBatis</span><br><span class="line">JPA (Java Persistence API)</span><br><span class="line">TopLink</span><br><span class="line">JDO (Java Data Objects)</span><br><span class="line">OJB</span><br></pre></td></tr></table></figure>
+<h2 id="46-如何通过HibernateDaoSupport将Spring和Hibernate结合起来？"><a href="#46-如何通过HibernateDaoSupport将Spring和Hibernate结合起来？" class="headerlink" title="46.如何通过HibernateDaoSupport将Spring和Hibernate结合起来？"></a>46.如何通过HibernateDaoSupport将Spring和Hibernate结合起来？</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">用Spring的 SessionFactory 调用 LocalSessionFactory。集成过程分三步：</span><br><span class="line">配置the Hibernate SessionFactory。</span><br><span class="line">继承HibernateDaoSupport实现一个DAO。</span><br><span class="line">在AOP支持的事务中装配。</span><br></pre></td></tr></table></figure>
+<h3 id="Spring支持的事务管理类型"><a href="#Spring支持的事务管理类型" class="headerlink" title="Spring支持的事务管理类型"></a>Spring支持的事务管理类型</h3><h2 id="Spring支持两种类型的事务管理："><a href="#Spring支持两种类型的事务管理：" class="headerlink" title="Spring支持两种类型的事务管理："></a>Spring支持两种类型的事务管理：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">编程式事务管理：这意味你通过编程的方式管理事务，给你带来极大的灵活性，但是难维护。</span><br><span class="line">声明式事务管理：这意味着你可以将业务代码和事务管理分离，你只需用注解和XML配置来管理事务。</span><br></pre></td></tr></table></figure>
+<h2 id="Spring框架的事务管理有哪些优点？"><a href="#Spring框架的事务管理有哪些优点？" class="headerlink" title="Spring框架的事务管理有哪些优点？"></a>Spring框架的事务管理有哪些优点？</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">它为不同的事务API 如 JTA，JDBC，Hibernate，JPA 和JDO，提供一个不变的编程模式。</span><br><span class="line">它为编程式事务管理提供了一套简单的API而不是一些复杂的事务API如</span><br><span class="line">它支持声明式事务管理。</span><br></pre></td></tr></table></figure>
+<h2 id="它和Spring各种数据访问抽象层很好得集成。"><a href="#它和Spring各种数据访问抽象层很好得集成。" class="headerlink" title="它和Spring各种数据访问抽象层很好得集成。"></a>它和Spring各种数据访问抽象层很好得集成。</h2><p>你更倾向用那种事务管理类型？</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">大多数Spring框架的用户选择声明式事务管理，因为它对应用代码的影响最小，因此更符合一个无侵入的轻量级容器的思想。声明式事务管理要优于编程式事务管理，虽然比编程式事务管理（这种方式允许你通过代码控制事务）少了一点灵活性。</span><br></pre></td></tr></table></figure>
+<h3 id="Spring面向切面编程（AOP）"><a href="#Spring面向切面编程（AOP）" class="headerlink" title="Spring面向切面编程（AOP）"></a>Spring面向切面编程（AOP）</h3><h2 id="解释AOP"><a href="#解释AOP" class="headerlink" title="解释AOP"></a>解释AOP</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">面向切面的编程，或AOP， 是一种编程技术，允许程序模块化横向切割关注点，或横切典型的责任划分，如日志和事务管理。</span><br><span class="line">Aspect 切面</span><br><span class="line">AOP核心就是切面，它将多个类的通用行为封装成可重用的模块，该模块含有一组API提供横切功能。比如，一个日志模块可以被称作日志的AOP切面。根据需求的不同，一个应用程序可以有若干切面。在Spring AOP中，切面通过带有@Aspect注解的类实现。</span><br><span class="line">在Spring AOP 中，关注点和横切关注的区别是什么？</span><br><span class="line">关注点是应用中一个模块的行为，一个关注点可能会被定义成一个我们想实现的一个功能。</span><br><span class="line">横切关注点是一个关注点，此关注点是整个应用都会使用的功能，并影响整个应用，比如日志，安全和数据传输，几乎应用的每个模块都需要的功能。因此这些都属于横切关注点。</span><br></pre></td></tr></table></figure>
+<h2 id="连接点"><a href="#连接点" class="headerlink" title="连接点"></a>连接点</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">连接点代表一个应用程序的某个位置，在这个位置我们可以插入一个AOP切面，它实际上是个应用程序执行Spring AOP的位置。</span><br></pre></td></tr></table></figure>
+<h2 id="通知"><a href="#通知" class="headerlink" title="通知"></a>通知</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">通知是个在方法执行前或执行后要做的动作，实际上是程序执行时要通过SpringAOP框架触发的代码段。</span><br><span class="line">Spring切面可以应用五种类型的通知：</span><br><span class="line">before：前置通知，在一个方法执行前被调用。</span><br><span class="line">after: 在方法执行之后调用的通知，无论方法执行是否成功。</span><br><span class="line">after-returning: 仅当方法成功完成后执行的通知。</span><br><span class="line">after-throwing: 在方法抛出异常退出时执行的通知。</span><br><span class="line">around: 在方法执行之前和之后调用的通知。</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#切点</span></span><br><span class="line">切入点是一个或一组连接点，通知将在这些位置执行。可以通过表达式或匹配的方式指明切入点。</span><br><span class="line"><span class="comment">#什么是引入?</span></span><br><span class="line">引入允许我们在已存在的类中增加新的方法和属性。</span><br><span class="line"><span class="comment">#什么是目标对象?</span></span><br><span class="line">被一个或者多个切面所通知的对象。它通常是一个代理对象。也指被通知（advised）对象。</span><br><span class="line"><span class="comment">#什么是代理?</span></span><br><span class="line">代理是通知目标对象后创建的对象。从客户端的角度看，代理对象和目标对象是一样的。</span><br><span class="line">有几种不同类型的自动代理？</span><br><span class="line">BeanNameAutoProxyCreator</span><br><span class="line">DefaultAdvisorAutoProxyCreator</span><br><span class="line">Metadata autoproxying</span><br><span class="line"><span class="comment">#什么是织入。什么是织入应用的不同点？</span></span><br><span class="line">织入是将切面和到其他应用类型或对象连接或创建一个被通知对象的过程。</span><br><span class="line">织入可以在编译时，加载时，或运行时完成。</span><br><span class="line"><span class="comment">#解释基于XML Schema方式的切面实现。</span></span><br><span class="line">在这种情况下，切面由常规类以及基于XML的配置实现。</span><br><span class="line">解释基于注解的切面实现</span><br><span class="line">在这种情况下(基于@AspectJ的实现)，涉及到的切面声明的风格与带有java5标注的普通java类一致。</span><br><span class="line">Spring 的MVC</span><br><span class="line"><span class="comment">#什么是Spring的MVC框架？</span></span><br><span class="line">Spring 配备构建Web 应用的全功能MVC框架。Spring可以很便捷地和其他MVC框架集成，如Struts，Spring 的MVC框架用控制反转把业务对象和控制逻辑清晰地隔离。它也允许以声明的方式把请求参数和业务对象绑定。</span><br><span class="line"><span class="comment">#DispatcherServlet</span></span><br><span class="line">Spring的MVC框架是围绕DispatcherServlet来设计的，它用来处理所有的HTTP请求和响应。</span><br><span class="line"><span class="comment">#WebApplicationContext</span></span><br><span class="line">WebApplicationContext 继承了ApplicationContext 并增加了一些WEB应用必备的特有功能，它不同于一般的ApplicationContext ，因为它能处理主题，并找到被关联的servlet。</span><br><span class="line"><span class="comment">#什么是Spring MVC框架的控制器？</span></span><br><span class="line">控制器提供一个访问应用程序的行为，此行为通常通过服务接口实现。控制器解析用户输入并将其转换为一个由视图呈现给用户的模型。Spring用一个非常抽象的方式实现了一个控制层，允许用户创建多种用途的控制器。</span><br><span class="line"><span class="comment">#@Controller 注解</span></span><br><span class="line">该注解表明该类扮演控制器的角色，Spring不需要你继承任何其他控制器基类或引用Servlet API。</span><br><span class="line"><span class="comment">#@RequestMapping 注解</span></span><br><span class="line">该注解是用来映射一个URL到一个类或一个特定的方处理法上。</span><br></pre></td></tr></table></figure>
+      
+       
+      
+      
+      <div>
+        <blockquote>
+            <strong>本文作者：</strong>
             
-  
-    <article id="post-Java链表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-   
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/03/Java%E9%93%BE%E8%A1%A8/">Java链表</a>
-    </h1>
-  
-
-        
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一、List-列表"><a href="#一、List-列表" class="headerlink" title="一、List(列表)"></a>一、List(列表)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">List的元素以线性方式存储，可以存放重复对象，List主要有以下两个实现类：</span><br><span class="line">ArrayList : 长度可变的数组，可以对元素进行随机的访问，向ArrayList中插入与删除元素的速度慢。 JDK8 中ArrayList扩容的实现是通过grow()方法里使用语句newCapacity = oldCapacity + (oldCapacity &gt;&gt; 1)（即1.5倍扩容）计算容量，然后调用Arrays.copyof()方法进行对原数组进行复制。</span><br><span class="line">LinkedList: 采用链表数据结构，插入和删除速度快，但访问速度慢。</span><br><span class="line">进行存储顺序排序，可以用get下标顺序获取数据或者迭代器</span><br></pre></td></tr></table></figure>
-<h3 id="二、Set-集合"><a href="#二、Set-集合" class="headerlink" title="二、Set(集合)"></a>二、Set(集合)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Set中的对象不按特定(HashCode)的方式排序，并且没有重复对象，Set主要有以下两个实现类：</span><br><span class="line">HashSet： HashSet按照哈希算法来存取集合中的对象，存取速度比较快。当HashSet中的元素个数超过数组大小*loadFactor（默认值为0.75）时，就会进行近似两倍扩容（newCapacity = (oldCapacity &lt;&lt; <span class="string">1) + 1</span>）。</span><br><span class="line">TreeSet ：TreeSet实现了SortedSet接口，能够对集合中的对象进行排序。</span><br><span class="line">只能用迭代器获取，用于筛选重复数据</span><br><span class="line"><span class="comment">##三、Map(映射)</span></span><br><span class="line">Map是一种把键对象和值对象映射的集合，它的每一个元素都包含一个键对象和值对象。 Map主要有以下两个实现类：</span><br><span class="line">HashMap：HashMap基于散列表实现，其插入和查询&lt;K,V&gt;的开销是固定的，可以通过构造器设置容量和负载因子来调整容器的性能。</span><br><span class="line">LinkedHashMap：类似于HashMap，但是迭代遍历它时，取得&lt;K,V&gt;的顺序是其插入次序，或者是最近最少使用(LRU)的次序。</span><br><span class="line">TreeMap：TreeMap基于红黑树实现。查看&lt;K,V&gt;时，它们会被排序。TreeMap是唯一的带有subMap()方法的Map，subMap()可以返回一个子树。</span><br><span class="line">HashMap</span><br><span class="line">底层实现：HashMap底层整体结构是一个数组，数组中的每个元素又是一个链表。每次添加一个对象（put）时会产生一个链表对象（Object类型），Map中的每个Entry就是数组中的一个元素（Map.Entry就是一个&lt;Key,Value&gt;），它具有由当前元素指向下一个元素的引用，这就构成了链表。</span><br><span class="line">  存储原理：当向HsahMap中添加元素的时候，先根据HashCode重新计算Key的Hash值，得到数组下标，如果数组该位置已经存在其他元素，那么这个位置的元素将会以链表的形式存放，新加入的放在链头，最先加入的放在链尾，如果数组该位置元素不存在，那么就直接将该元素放到此数组中的该位置。</span><br><span class="line">  去重原理：不同的Key算到数组下标相同的几率很小，新建一个&lt;K,V&gt;放入到HashMap的时候，首先会计算Key的数组下标，如果数组该位置已经存在其他元素，则比较两个Key，若相同则覆盖写入，若不同则形成链表。</span><br><span class="line">  读取原理：从HashMap中读取（get）元素时，首先计算Key的HashCode，找到数组下标，然后在对应位置的链表中找到需要的元素。hashCode()值存储通过存储栈中的指针的值。</span><br><span class="line">  扩容机制：当HashMap中的元素个数超过数组大小*loadFactor（默认值为0.75）时，就会进行2倍扩容（oldThr &lt;&lt; <span class="string">1）。</span></span><br></pre></td></tr></table></figure>
-<h3 id="四、使用区别"><a href="#四、使用区别" class="headerlink" title="四、使用区别"></a>四、使用区别</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">List和Set是实现了Collection接口；</span><br><span class="line">List：有序访问、索引访问</span><br><span class="line">Set(HashSet、LinkedHashSet 或者 TreeSet)：去重</span><br><span class="line">Map：键值存储</span><br><span class="line">如果你经常会使用索引来对容器中的元素进行访问，那么 List 是你的正确的选择。如果你已经知道索引了的话，那么 List 的实现类比如 ArrayList 可以提供更快速的访问,如果经常添加删除元素的，那么肯定要选择LinkedList。</span><br><span class="line">如果你想容器中的元素能够按照它们插入的次序进行有序存储，那么还是 List，因为 List 是一个有序容器，它按照插入顺序进行存储。</span><br><span class="line">如果你想保证插入元素的唯一性，也就是你不想有重复值的出现，那么可以选择一个 Set 的实现类，比如 HashSet、LinkedHashSet 或者 TreeSet。所有 Set 的实现类都遵循了统一约束比如唯一性，而且还提供了额外的特性比如 TreeSet 还是一个 SortedSet，所有存储于 TreeSet 中的元素可以使用 Java 里的 Comparator 或者 Comparable 进行排序。LinkedHashSet 也按照元素的插入顺序对它们进行存储。</span><br><span class="line">如果你以键和值的形式进行数据存储那么 Map 是你正确的选择。你可以根据你的后续需要从 Hashtable、HashMap、TreeMap 中进行选择。</span><br></pre></td></tr></table></figure>
-<h3 id="一、ArrayList和LinkedList查询之间的区别"><a href="#一、ArrayList和LinkedList查询之间的区别" class="headerlink" title="一、ArrayList和LinkedList查询之间的区别"></a>一、ArrayList和LinkedList查询之间的区别</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">首先，从名字就可以看出，ArrayList和LinkedList的区别，ArrayList是基于数组的，LinkedList是基于链表的。</span><br><span class="line">从这一点，我们可以推理出来，ArrayList适合查询，LinkedList适合插入，但是这只是一个广泛的结论，我们应该了解的更细致一点。</span><br><span class="line">比如，对于ArrayList，它真正的优点是按下标查询元素，相比于LinkedList，LinkedList也可以按下标查询元素，但是LinkedList需要对底层链表进行遍历，才能找到指定下标的元素，而ArrayList不用，所以这是ArrayList的优点。</span><br><span class="line">但是，如果我们讨论的是获取第一个元素，或最后一个元素，ArrayList和LinkedList在性能上是没有区别的，因为LinkedList中有两个属性分别记录了当前链表中的头结点和尾结点，并不需要遍历链表。</span><br><span class="line">以上，是对于ArrayList和LinkedList在查询方面的区别。</span><br><span class="line">ArrayList  连续 内存存储  存储类型统一  (动态数组)</span><br><span class="line">LinkedList 分散 内存存储  链表指针查询 没有存储类型规定   删除插入简单</span><br><span class="line">默认情况下，比如调用ArrayList和LinkedList的add(e)方法，都是插入在最后，如果这种操作比较多，那么就用LinkedList，因为不涉及到扩容。</span><br><span class="line">2.如果调用ArrayList和LinkedList的add(index, e)方法比较多，就要具体考虑了，因为ArrayList可能会扩容，LinkedList需要遍历链表，这两种到底哪种更快，是没有结论的，得具体情况具体分析。</span><br><span class="line">3.还有，如果是插入场景比较少，但经常需要查询的话，查询分两种，第一种就是普通遍历，也就是经常需要对List中的元素进行遍历，那么这两种是区别不大的，遍历链表和遍历数组的区别，第二种就是经常需要按指定下标获取List中的元素，如果这种情况如果比较多，那么就用ArrayList</span><br><span class="line"></span><br><span class="line">hashmap、hashtable  .HashMap是Hashtable的轻量级实现（非线程安全的实现），他们都完成了Map接口，主要区别在于HashMap允许空（null）键值（key）,由于非线程安全，在只有一个线程访问的情况下，效率要高于Hashtable。</span><br><span class="line">最大的不同是，Hashtable的方法是Synchronize的，而HashMap不是，在多个线程访问Hashtable时，不需要自己为它的方法实现同步，而HashMap就必须为之提供同步。</span><br></pre></td></tr></table></figure>
-
-
-      
+              MR.Zhang 博客
+            
+            <br>  <strong>本文链接：</strong>  https://zhangyu921996508.github.io/2023/03/06/spring0001/
+            <br>
+            <strong>版权声明：</strong>
+            本作品采用  <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>
+            进行许可。转载请注明出处！
+            
+              <br>
+              <a rel="license noopener" target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png"/></a>
+            
+          </blockquote>
+         
+          <hr>
+            <center><strong>乐于分享,专注互联网生活.</strong></center>
+          <hr>
+       </div>
        
-      
-      
-      <div hidden="hidden"></div>
-    
 
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/zfb0001.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/wx0001.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -200,7 +297,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java,Spring</a>
         		</li>
       		
 		</ul>
@@ -209,16 +306,84 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/03/Java%E9%93%BE%E8%A1%A8/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://zhangyu921996508.github.io/2023/03/06/spring0001/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2023/03/06/js001/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          js使用技巧
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/03/03/%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">服务框架dubbo和zookeeper</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -238,263 +403,14 @@
 
 
 
-
-  
-    <article id="post-Maven" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-   
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/03/Maven/">Maven</a>
-    </h1>
-  
-
-        
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="Maven-安装-操作"><a href="#Maven-安装-操作" class="headerlink" title="Maven 安装 操作"></a>Maven 安装 操作</h3><h2 id="项目常用mvn命令"><a href="#项目常用mvn命令" class="headerlink" title="项目常用mvn命令"></a>项目常用mvn命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mvn clean install</span><br><span class="line">mvn  -T 4C clean <span class="built_in">test</span> -Dcheckstyle.skip=<span class="literal">false</span>  -Dlicese.skip=<span class="literal">false</span></span><br><span class="line">运行验证</span><br><span class="line">mvn  validate</span><br><span class="line">mvn 基本命令</span><br><span class="line">删除target目录</span><br><span class="line">mvn clean</span><br></pre></td></tr></table></figure>
-<p>编译操作 </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">主程序编译 mvn complie 存放目录traget/classes</span><br><span class="line">测试程序编译 Mvn <span class="built_in">test</span> -compile  target/test-classes</span><br></pre></td></tr></table></figure>
-
-<p>测试操作</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mvn <span class="built_in">test</span></span><br><span class="line">测试报告目录存放目录 target/surefire-repots</span><br><span class="line">打包操作 打Jar包</span><br><span class="line">mvn package</span><br></pre></td></tr></table></figure>
-
-<p>安装操作</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mvn  install</span><br><span class="line">将本地构建之后生成的Jar包存入本地的MaVen仓库。路径是根据项目的Maven坐标生成</span><br></pre></td></tr></table></figure>
-
-<p>只打包不测试</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Mvn package -Dmaven.test.skip=<span class="literal">true</span> (跳过测试代码的编译)</span><br><span class="line">mvn dependency:tree  看到依赖树</span><br><span class="line">mvn dependency :analyse 查看依赖的工具</span><br><span class="line"></span><br><span class="line">只打包不测试</span><br><span class="line">Mvn -Dtest package </span><br><span class="line">指定端口</span><br><span class="line">mvn -Dmaven.tmocat.port=9090</span><br><span class="line">忽略测试失败</span><br><span class="line">mvn -Dmaven.test.failure.ignore=<span class="literal">true</span></span><br></pre></td></tr></table></figure>
-      
-       
-      
-      
-      <div hidden="hidden"></div>
-    
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Maven</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/03/Maven/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-第一篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-   
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/02/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">第一篇博客</a>
-    </h1>
-  
-
-        
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="dexo-安装-操作"><a href="#dexo-安装-操作" class="headerlink" title="dexo 安装 操作"></a>dexo 安装 操作</h3><pre><code class="bash">查看版本：cnpm -v
-   
-验证：hexo -v
-初始化hexo：hexo init
-新建文章：hexo n &quot;my first blog&quot;
-启动博客（或是在之后预览）:hexo s
-然后清理缓存：hexo clean
-生成：hexo g
-启动：hexo s
-
-cnpm install --save hexo-deployer-git
-</code></pre>
-<h3 id="x2F-x2F-注意空格"><a href="#x2F-x2F-注意空格" class="headerlink" title="&#x2F;&#x2F;注意空格"></a>&#x2F;&#x2F;注意空格</h3><pre><code>deploy:
-type: git
-repo: https://github.com/Zhang-Xiaohei/Zhang-Xiaohei.github.io.git
-branch: master
-
-样板放在  themes 文件下 如   themes/yilia
-</code></pre>
-
-      
-       
-      
-      
-      <div hidden="hidden"></div>
-    
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/02/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-   
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/03/02/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-       
-      
-      
-      <div hidden="hidden"></div>
-    
-
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2023/03/02/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -519,8 +435,8 @@ branch: master
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
