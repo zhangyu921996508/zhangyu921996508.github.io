@@ -10,9 +10,10 @@
         <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
     </head>
     <body >
+        
         <div class="page gallery js_show">
 
-            <div class="page__bd" style="height: 100%;">
+            <div class="page__bd weui-bottom-fixed-opr-page" >
                 <div class="weui-tab">
                     <div class="weui-navbar">
                         <div role="tab" aria-selected="true" aria-controls="panel1" id="tab1" class="weui-navbar__item weui-bar__item_on">
@@ -105,36 +106,85 @@
                     <div style="display: none;" role="tabpanel" id="panel4" aria-labelledby="tab3" class="weui-tab__panel">
 
                     </div>
-                
+                    <div class="weui-bottom-fixed-opr  button1" >
+                        <a href="javascript:" role="button" class="weui-btn weui-btn_primary" id="weui-btn_primary1" >层级</a>
+                    </div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-            
-           
+       
         </div>
-             
+
+        <div  id="layers2" class="page ">
+        
+            <div class="page__bd"  >
+                <div class="layers j_layers">
+                    <div data-name="popout" class="j_layer layers__layer layers__layer_popout j_transform"> <span>Popout</span></div>
+                    <div data-name="mask" class="j_layer layers__layer layers__layer_mask j_transform"><span>Mask</span></div>
+                    <div data-name="navigation" class="j_layer layers__layer layers__layer_navigation j_transform"><span>Navigation</span></div>
+                    <div data-name="content" class="j_layer layers__layer layers__layer_content j_transform"><span>Content</span></div>
+                </div>
+            </div>
+        </div> 
+
+
+
+
+
+
+
+
     </body>
-   
+     <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script  type="text/javascript"  src="https://res.wx.qq.com/t/wx_fed/weui.js/res/1.2.17/weui.min.js"></script>
     <script type="text/javascript">
+        var  c= document.getElementById("weui-btn_primary1");
+            c.addEventListener("click",function(){
+                console.log("11111");
+                    alert("测试");
+            })
+       
+            /* 选项卡 */
         $(function(){
-        $('.weui-navbar__item').on('click', function () {
-            $(this).attr('aria-selected','true').addClass('weui-bar__item_on');
-            $(this).siblings('.weui-bar__item_on').removeClass('weui-bar__item_on').attr('aria-selected','false');
-            var panelId = '#' + $(this).attr('aria-controls');
-            $(panelId).css('display','block');
-            $(panelId).siblings('.weui-tab__panel').css('display','none');
+
+           var  c= document.getElementById("weui-btn_primary1");
+            c.addEventListener("click",function(){
+                console.log("11111");
+                    alert("测试");
+            })
+           c.onclick=function(){
+                    console.log("11111");
+                    alert("测试");
+                };
+
+            /* $('#btn_primary1').on('click', function(){
+                    console.log("11111");
+                    alert("测试");
+                }); */
+           /*  $('#btn_primary1').on('click',function () {
+
+                alert("测试");
+            }); */
+          /*   $('.weui-btn').on('click', function () {
+             
+                alert("测试");
+            }); */
+/* 
+            $(document).on('click','.weui-btn_primary',function () {
+             
+             alert("测试");
+         }); */
+
+
+
+
+            $('.weui-navbar__item').on('click', function () {
+                $(this).attr('aria-selected','true').addClass('weui-bar__item_on');
+                $(this).siblings('.weui-bar__item_on').removeClass('weui-bar__item_on').attr('aria-selected','false');
+                var panelId = '#' + $(this).attr('aria-controls');
+                $(panelId).css('display','block');
+                $(panelId).siblings('.weui-tab__panel').css('display','none');
+            });
         });
-    });
     </script>
 
 

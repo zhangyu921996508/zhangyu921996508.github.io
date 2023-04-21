@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+		<title></title>
+	</head>
+	<body>
+		<button onclick="coverDiv()">显示</button>
+	</body>
+	<script type="text/javascript">
+	//显示遮罩
+	function coverDiv(){
+        var procbg = document.createElement("div"); //首先创建一个div
+        procbg.setAttribute("id","mybg"); //定义该div的id
+        procbg.style.background = "#000000";
+        procbg.style.width = "100%";
+        procbg.style.height = "100%";
+        procbg.style.position = "fixed";
+        procbg.style.top = "0";
+        procbg.style.left = "0";
+        procbg.style.zIndex = "500";
+        procbg.style.opacity = "0.6";
+        procbg.style.filter = "Alpha(opacity=70)";
+        document.body.appendChild(procbg);
+    }
+    //取消遮罩
+    function hide() {
+        var body = document.getElementsByTagName("body");
+        var mybg = document.getElementById("mybg");
+        body[0].removeChild(mybg);
+    }
+    /* 解释：实现的方式非常easy，就是动态创建一个div，
+     * 设置的背景颜色等等，假设你是弹出一个框框，
+     * 而且在框没有关闭之前是不能操作父级的元素中的，
+     * 那么你就能够让你的框和这个遮罩div同一时候显示，
+     * 而仅仅须要设置他们的z-index样式，来选择谁在
+     * 上在下的顺序，就能够啦。
+     * 欢迎增加Java交流群：398918539
+     */
+	</script>
+</html>
